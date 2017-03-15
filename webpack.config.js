@@ -1,9 +1,10 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var PRODUCTION = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  devtool: 'source-map-inline',
+  devtool: PRODUCTION ? 'source-map' : 'source-map-inline',
   entry: {
     app: path.resolve('src/entries/app.js'),
     landing: path.resolve('src/entries/landing.js'),
