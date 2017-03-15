@@ -14,7 +14,8 @@
   "repository": "rdiazv/webpack-lightning-demo",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --hot"
+    "dev": "webpack-dev-server --hot",
+    "profile": "webpack --profile --json > webpack.stats.json"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",
