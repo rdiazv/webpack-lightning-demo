@@ -60,5 +60,8 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendors',
     }),
+    new webpack.DefinePlugin({
+      '__DEBUG__': JSON.stringify(!PRODUCTION),
+    }),
   ],
 }

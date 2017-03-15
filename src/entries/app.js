@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom'
 import logoSrc from 'images/logo.png'
 import LazyComponent from 'components/LazyComponent'
 
+if (__DEBUG__) {
+  console.warn('You are in development mode :)')
+}
+
 class App extends React.Component {
   state = {
     showBigComponent: false,
