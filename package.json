@@ -11,5 +11,11 @@
     "name": "Rodrigo Andrés Díaz Vergara",
     "email": "rdiaz@lemontech.cl"
   },
-  "repository": "rdiazv/webpack-lightning-demo"
+  "repository": "rdiazv/webpack-lightning-demo",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
 }
