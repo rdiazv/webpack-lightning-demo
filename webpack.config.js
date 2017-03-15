@@ -17,7 +17,7 @@ module.exports = {
     path: path.resolve('build'),
 
     // [name] corresponds to the key of each entry. In this case `app` and `landing`.
-    filename: '[name].js',
+    filename: PRODUCTION ? '[name]-[chunkhash].js' : '[name].js',
   },
   module: {
     rules: [
