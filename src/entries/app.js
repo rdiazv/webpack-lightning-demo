@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import logoSrc from '../images/logo.png'
+import logoSrc from 'images/logo.png'
 
 class App extends React.Component {
   render() {
