@@ -2,6 +2,7 @@ var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  devtool: 'source-map-inline',
   entry: path.resolve('src/entries/app.js'),
   output: {
     path: path.resolve('build'),
