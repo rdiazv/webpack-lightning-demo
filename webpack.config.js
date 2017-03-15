@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -6,6 +7,10 @@ module.exports = {
   entry: {
     app: path.resolve('src/entries/app.js'),
     landing: path.resolve('src/entries/landing.js'),
+    vendors: [
+      'react',
+      'react-dom',
+    ]
   },
   output: {
     path: path.resolve('build'),
@@ -43,13 +48,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve('src/index.html'),
-      chunks: ['app'],
+      chunks: ['app', 'vendors'],
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: path.resolve('src/index.html'),
-      chunks: ['landing'],
+      chunks: ['landing', 'vendors'],
       filename: 'landing.html',
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendors',
     }),
   ],
 }
