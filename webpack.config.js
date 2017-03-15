@@ -1,4 +1,5 @@
 var path = require('path')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: path.resolve('src/entries/app.js'),
@@ -6,4 +7,9 @@ module.exports = {
     path: path.resolve('build'),
     filename: 'app.js',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve('src/index.html'),
+    })
+  ],
 }
