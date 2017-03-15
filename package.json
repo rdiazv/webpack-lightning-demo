@@ -1,0 +1,15 @@
+{
+  "name": "webpack-lightning-demo",
+  "version": "1.0.0",
+  "description": "An example of webpack multiple case uses.",
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Rodrigo Andrés Díaz Vergara",
+    "email": "rdiaz@lemontech.cl"
+  },
+  "repository": "rdiazv/webpack-lightning-demo"
+}
