@@ -8,6 +8,7 @@ class App extends React.Component {
       <div>
         <h1>Hello World</h1>
         <img src={logoSrc} width="40" />
+        <a href="/landing.html">Sign out</a>
       </div>
     )
   }

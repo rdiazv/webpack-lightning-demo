@@ -3,10 +3,15 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   devtool: 'source-map-inline',
-  entry: path.resolve('src/entries/app.js'),
+  entry: {
+    app: path.resolve('src/entries/app.js'),
+    landing: path.resolve('src/entries/landing.js'),
+  },
   output: {
     path: path.resolve('build'),
-    filename: 'app.js',
+
+    // [name] corresponds to the key of each entry. In this case `app` and `landing`.
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -38,6 +43,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve('src/index.html'),
-    })
+      chunks: ['app'],
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve('src/index.html'),
+      chunks: ['landing'],
+      filename: 'landing.html',
+    }),
   ],
 }
